@@ -1,0 +1,190 @@
+\section{Detector and simulation}
+\label{sec:Detector}
+The paragraph below can be used for the detector
+description. Modifications may be required in specific papers to fit
+within page limits, to enhance particular detector elements or to
+introduce acronyms used later in the text. For journals where strict
+word counts are applied (for example, PRL), and space is at a premium,
+it may be sufficient to write, as a minimum: ``The LHCb detector is a 
+single-arm forward spectrometer covering the pseudorapidity range 
+$2 < \eta < 5$, 
+described in detail in Refs.~\cite{Alves:2008zz,LHCb-DP-2014-002}''. 
+A slightly longer version could specify the most relevant sub-detectors, {\it e.g} 
+``The LHCb 
+detector~\cite{Alves:2008zz,LHCb-DP-2014-002} is a
+single-arm forward spectrometer covering the pseudorapidity range $2 < \eta < 5$, designed for
+the study of particles containing b or c quarks. The detector elements that are particularly
+relevant to this analysis are: a silicon-strip vertex detector surrounding the pp interaction
+region that allows c- and b-hadrons to be identified from their characteristically long
+flight distance; a tracking system that provides a measurement of momentum, $p$, of charged
+particles; and two ring-imaging Cherenkov detectors that are able to discriminate between
+different species of charged hadrons.'' 
+
+\begin{verbatim}
+In the following paragraph, references to the individual detector 
+performance papers are marked with a * and should only be included 
+if the analysis relies on numbers or methods described in the specific 
+papers. Otherwise, a reference to the overall detector performance 
+paper~\cite{LHCb-DP-2014-002} will suffice. Note also that the text 
+defines the acronyms for primary vertex, PV, and impact parameter, IP. 
+Remove either of those in case it is not used later on.
+\end{verbatim}
+
+The \lhcb detector~\cite{Alves:2008zz,LHCb-DP-2014-002} is a single-arm forward
+spectrometer covering the \mbox{pseudorapidity} range $2<\eta <5$,
+designed for the study of particles containing \bquark or \cquark
+quarks. The detector includes a high-precision tracking system
+consisting of a silicon-strip vertex detector surrounding the $pp$
+interaction region~\cite{LHCb-DP-2014-001}\verb!*!, a large-area silicon-strip detector located
+upstream of a dipole magnet with a bending power of about
+$4{\mathrm{\,Tm}}$, and three stations of silicon-strip detectors and straw
+drift tubes~\cite{LHCb-DP-2013-003}\verb!*! placed downstream of the magnet.
+The tracking system provides a measurement of momentum, \ptot, of charged particles with
+a relative uncertainty that varies from 0.5\% at low momentum to 1.0\% at 200\gevc.
+The minimum distance of a track to a primary vertex (PV), the impact parameter (IP), 
+is measured with a resolution of $(15+29/\pt)\mum$,
+where \pt is the component of the momentum transverse to the beam, in\,\gevc.
+Different types of charged hadrons are distinguished using information
+from two ring-imaging Cherenkov detectors~\cite{LHCb-DP-2012-003}\verb!*!. 
+Photons, electrons and hadrons are identified by a calorimeter system consisting of
+scintillating-pad and preshower detectors, an electromagnetic
+calorimeter and a hadronic calorimeter. Muons are identified by a
+system composed of alternating layers of iron and multiwire
+proportional chambers~\cite{LHCb-DP-2012-002}\verb!*!.
+The online event selection is performed by a trigger~\cite{LHCb-DP-2012-004}\verb!*!, 
+which consists of a hardware stage, based on information from the calorimeter and muon
+systems, followed by a software stage, which applies a full event
+reconstruction.
+
+A more detailed description of the 'full event reconstruction' could be:
+\begin{itemize}
+\item The trigger~\cite{LHCb-DP-2012-004}\verb!*! consists of a
+hardware stage, based on information from the calorimeter and muon
+systems, followed by a software stage, in which all charged particles
+with $\pt>500\,(300)\mev$ are reconstructed for 2011\,(2012) data.
+For triggers that require neutral particles, 
+energy deposits in the electromagnetic calorimeter are 
+analysed to reconstruct \piz and $\gamma$ candidates.
+\end{itemize}
+
+The trigger description has to be specific for the analysis in
+question. In general, you should not attempt to describe the full
+trigger system. Below are a few variations that inspiration can be
+taken from. First from a hadronic analysis, and second from an
+analysis with muons in the final state. In case you have to look 
+up specifics of a certain trigger, a detailed description of the trigger 
+conditions for Run 1 is available in Ref.~\cite{LHCb-PUB-2014-046}. 
+{\bf Never cite this note in a PAPER or CONF-note.} 
+
+
+\begin{itemize}
+\item At the hardware trigger stage, events are required to have a muon with high \pt or a
+  hadron, photon or electron with high transverse energy in the calorimeters. For hadrons,
+  the transverse energy threshold is 3.5\gev.
+  The software trigger requires a two-, three- or four-track
+  secondary vertex with a significant displacement from the primary
+  $pp$ interaction vertices. At least one charged particle
+  must have a transverse momentum $\pt > 1.7\gevc$ and be
+  inconsistent with originating from a PV.
+  A multivariate algorithm~\cite{BBDT} is used for
+  the identification of secondary vertices consistent with the decay
+  of a \bquark hadron.
+%\item The software trigger requires a two-, three- or four-track
+%  secondary vertex with a large sum of the transverse momentum, \pt, of
+%  the tracks and a significant displacement from the primary $pp$
+%  interaction vertices~(PVs). At least one track should have $\pt >
+%  1.7\gevc$ and \chisqip with respect to any
+%  primary interaction greater than 16, where \chisqip is defined as the
+%  difference in \chisq of a given PV reconstructed with and
+%  without the considered track.\footnote{If this sentence is used to define \chisqip
+%  for a composite particle instead of for a single track, replace ``track'' by ``particle'' or ``candidate''}
+% A multivariate algorithm~\cite{BBDT} is used for
+%  the identification of secondary vertices consistent with the decay
+%  of a \bquark hadron.
+\item The $\decay{\Bd}{\Kstarz\mumu}$ signal candidates are first required
+      to pass the hardware trigger, which selects events containing at least
+      one muon with transverse momentum $\pt>1.48\gevc$ in the 7\tev data or
+      $\pt>1.76\gevc$ in the 8\tev data.  In the subsequent software
+      trigger, at least one of the final-state particles is required to 
+      have $\pt>1.7\gevc$ in the 7\tev data or $\pt>1.6\gevc$ in the 8\tev 
+      data, unless the particle is identified as a muon in which case 
+      $\pt>1.0\gevc$ is required. The final-state particles that 
+      satisfy these transverse momentum criteria are also required 
+      to have an impact parameter larger than $100\mum$ with respect 
+      to all PVs in the event. Finally, the tracks of two or more of 
+      the final-state particles are required to form a vertex that is 
+      significantly displaced from the PVs." 
+
+%  Candidate events are first required to pass the hardware trigger,
+%  which selects muons with a transverse momentum $\pt>1.48\gevc$ 
+%  in the 7\tev data or $\pt>1.76\gevc$ in the 8\tev data.
+%  In the subsequent software trigger, at least
+%  one of the final-state particles is required to have both
+%  $\pt>0.8\gevc$ and impact parameter larger than $100\mum$ with respect to all
+%  of the primary $pp$ interaction vertices~(PVs) in the
+%  event. Finally, the tracks of two or more of the final-state
+%  particles are required to form a vertex that is significantly
+%  displaced from the PVs.
+\end{itemize}
+
+An example to describe the use of both TOS and TIS events:
+\begin{itemize}
+\item In the offline selection, trigger signals are associated with reconstructed particles.
+%Selection requirements can therefore be made not only on the trigger requirement,
+%but on whether the decision was due to the signal candidate, other particles produced in the $pp$ collision, or a combination of both.
+Selection requirements can therefore be made on the trigger selection itself
+and on whether the decision was due to the signal candidate, other particles produced in the $pp$ collision, or a combination of both.
+\end{itemize}
+
+A good example of a description of long and downstream \KS is given in 
+Ref.~\cite{LHCb-PAPER-2014-006}:
+\begin{itemize}
+\item
+Decays of \decay{\KS}{\pip\pim} are reconstructed in two different categories:
+the first involving \KS mesons that decay early enough for the
+daughter pions to be reconstructed in the vertex detector; and the
+second containing \KS that decay later such that track segments of the
+pions cannot be formed in the vertex detector. These categories are
+referred to as \emph{long} and \emph{downstream}, respectively. The
+long category has better mass, momentum and vertex resolution than the
+downstream category.
+\end{itemize}
+
+The description of our software stack for simulation is often
+causing trouble. The following paragraph can act as inspiration but
+with variations according to the level of detail required and if
+mentioning of \eg \photos is required.
+\begin{itemize}
+\item In the simulation, $pp$ collisions are generated using
+\pythia~\cite{Sjostrand:2006za,*Sjostrand:2007gs} 
+(In case only \pythia 6 is used, remove \verb=*Sjostrand:2007gs= from this citation; if 
+only \pythia 8 is used, then reverse the order of the papers in the citation.)
+ with a specific \lhcb
+configuration~\cite{LHCb-PROC-2010-056}.  Decays of hadronic particles
+are described by \evtgen~\cite{Lange:2001uf}, in which final-state
+radiation is generated using \photos~\cite{Golonka:2005pn}. The
+interaction of the generated particles with the detector, and its response,
+are implemented using the \geant
+toolkit~\cite{Allison:2006ve, *Agostinelli:2002hh} as described in
+Ref.~\cite{LHCb-PROC-2011-006}.
+\end{itemize}
+
+Many analyses depend on boosted decision trees. It is inappropriate to
+use TMVA as the reference as that is merely an implementation of the
+BDT algorithm. Rather it is suggested to write
+
+In this paper we use a boosted decision tree~(BDT)~\cite{Breiman,AdaBoost} to
+separate signal from background.
+
+When describing the integrated luminosity of the data set, do not use
+expressions like ``1.0\,fb$^{-1}$ of data'', but \eg 
+``data corresponding to an integrated luminosity of 1.0\,fb$^{-1}$'', 
+or ``data obtained from 3\,fb$^{-1}$ of integrated luminosity''. 
+
+For analyses where the periodical reversal of the magnetic field is crucial, 
+\eg in measurements of direct \CP violation, the following description can be
+used as an example phrase: 
+``The polarity of the dipole magnet is reversed periodically throughout data-taking.
+The configuration with the magnetic field vertically upwards, \MagUp (downwards, \MagDown), bends positively (negatively)
+charged particles in the horizontal plane towards the centre of the LHC.''
+Only use the \MagUp, \MagDown symbols if they are used extensively in tables or figures.

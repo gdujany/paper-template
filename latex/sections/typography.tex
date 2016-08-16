@@ -1,0 +1,183 @@
+\section{Typography}
+\label{sec:typography}
+
+The use of the Latex typesetting symbols defined in the file
+\texttt{lhcb-symbols-def.tex} and detailed in the appendices of this
+document is strongly encouraged as it will make it much easier to
+follow the recommendation set out below.
+
+\begin{enumerate}
+
+\item \lhcb is typeset with a normal (roman) lowercase b.
+
+\item Titles are in bold face, and usually only the first word is
+  capitalised.
+
+\item Mathematical symbols and particle names should also be typeset
+  in bold when appearing in titles.
+
+\item Units are in roman type, except for constants such as $c$ or $h$
+  that are italic: \gev, \gevcc.  The unit should be separated from
+  the value with a thin space (``\verb!\,!''),
+  and they should not be broken over two lines.
+  Correct spacing is automatic when using predefined units inside math mode: \verb!$3.0\gev$! $\to 3.0\gev$.
+  Spacing goes wrong when using predefined units outside math mode AND forcing extra space:
+  \verb!3.0\,\gev! $\to$ 3.0\,\gev or worse:   \verb!3.0~\gev! $\to$ 3.0~\gev. 
+
+\item  If factors of $c$ are kept, they should be used both for masses and
+  momenta, \eg $p=5.2\gevc$ (or $\gev c^{-1}$), $m = 3.1\gevcc$ (or $\gev c^{-2}$). If they are dropped this
+  should be done consistently throughout, and a note should be added
+  at the first instance to indicate that units are taken with $c=1$.
+
+\item The \% sign should not be separated from the number that precedes it: 5\%, not 5 \%. 
+A thin space is also acceptable: 5\,\%, but should be applied consistently throughout the paper.
+
+\item Ranges should be formatted consistently. The recommendend form is to use a dash with no spacing around it: 
+7--8\gev, obtained as \verb!7--8\gev!. 
+
+\item Italic is preferred for particle names (although roman is
+  acceptable, if applied consistently throughout).  Particle Data
+  Group conventions should generally be followed: \Bd (no need for a
+  ``d'' subscript), \decay{\Bs}{\jpsi\phi}, \Bsb,
+  (note the long bar, obtained with \verb!\overline!, in contrast to the discouraged short \verb!\bar{B}! resulting in $\bar{B}$), \KS (note the
+  uppercase roman type ``S''). 
+This is most easily achieved by using the predefined symbols described in 
+  Appendix~\ref{sec:listofsymbols}.
+  Unless there is a good reason not to, the charge of a particle should be
+  specified if there is any possible ambiguity 
+  ($m(\Kp\Km)$ instead of $m(KK)$, which could refer to neutral kaons).
+
+\item Decay chains can be written in several ways, depending on the complexity and the number of times it occurs. Unless there is a good reason not to, usage of a particular type should be consistent within the paper.
+Examples are: 
+$\Dsp\to\phi\pip$, with $\phi\to\Kp\Km$; 
+$\Dsp\to\phi\pip$ ($\phi\to\Kp\Km$);  
+$\Dsp\to\phi(\to\Kp\Km)\pip$; or
+$\Dsp\to[\Kp\Km]_\phi\pip$.
+
+
+
+\item Variables are usually italic: $V$ is a voltage (variable), while
+  1 V is a volt (unit). Also in combined expressions: $Q$-value, $z$-scale, $R$-parity \etc
+
+\item Subscripts and superscripts are roman type when they refer to a word (such as T
+  for transverse) and italic when they refer to a variable (such as
+  $t$ for time): \pt, \dms, $t_{\mathrm{rec}}$.
+
+\item Standard function names are in roman type: \eg $\cos$, $\sin$
+  and $\exp$.
+
+\item Figure, Section, Equation, Chapter and Reference should be
+  abbreviated as Fig., Sect. (or alternatively Sec.), Eq., Chap.\ and
+  Ref.\ respectively, when they refer to a particular (numbered) item,
+  except when they start a sentence. Table and Appendix are not
+  abbreviated.  The plural form of abbreviation keeps the point after
+  the s, \eg Figs.~1 and~2. Equations may be referred to either with 
+  (``Eq.~(1)'') or without (``Eq.~1'') parentheses, 
+  but it should be consistent within the paper.
+
+\item Common abbreviations derived from Latin such as ``for example''
+  (\eg), ``in other words'' (\ie), ``and so forth'' (\etc), ``and
+  others'' (\etal), ``versus'' (\vs) can be used, with the typography
+  shown, but not excessively; other more esoteric abbreviations should be avoided.
+  
+
+\item Units, material and particle names are usually lower case if
+  spelled out, but often capitalised if abbreviated: amps (A), gauss
+  (G), lead (Pb), silicon (Si), kaon (\kaon), but proton (\proton).
+
+%\item The prefix for 1000 (k, \eg kV) should not be confused with
+%  that used in computing (K, which strictly speaking denotes $2^{10}$,
+%  \eg KB).
+
+\item Counting numbers are usually written in words if they start a
+  sentence or if they have a value of ten or below in descriptive
+  text (\ie not including figure numbers such as ``Fig.\ 4'', or
+  values followed by a unit such as ``4\,cm'').
+  The word 'unity' can be useful to express the special meaning of
+  the number one in expressions such as: 
+``The BDT output takes values between zero and unity''.
+% Numbers should not be
+%  written as words if they by nature are real numbers that happen to
+%  take an integer value, such as $\chisq/\mathrm{ndf} < 4$.
+
+\item Numbers larger than 9999 have a comma (or a small space, but not both) between
+  the multiples of thousand: \eg 10,000 or 12,345,678.  The decimal
+  point is indicated with a point rather than a comma: \eg 3.141.
+
+\item We apply the rounding rules of the
+  PDG~\cite{PDG2014}. The basic rule states that if the three
+  highest order digits of the uncertainty lie between 100 and 354, we round
+  to two significant digits. If they lie between 355 and 949, we round
+  to one significant digit. Finally, if they lie between 950 and 999,
+  we round up and keep two significant digits. In all cases,
+  the central value is given with a precision that matches that of the
+  uncertainty. So, for example, the result $0.827 \pm 0.119$ should be
+  written as $0.83\pm 0.12$, $0.827\pm 0.367$ should turn into
+  $0.8\pm 0.4$, and $14.674\pm0.964$ becomes $14.7\pm1.0$.
+ When writing numbers with uncertainty components from
+  different sources, \ie statistical and systematic uncertainties, the rule
+  applies to the uncertainty with the best precision, so $0.827\pm
+  0.367\stat\pm 0.179\syst$ goes to $0.83\pm 0.37\stat\pm 0.18\syst$ and
+  $8.943\pm 0.123\stat\pm 0.995\syst$ goes to $8.94\pm 0.12\stat\pm
+  1.00\syst$.
+
+\item When rounding numbers, it should be avoided to pad with zeroes
+  at the end. So $51237 \pm 4561$ should be rounded as $(5.12 \pm 0.46)
+  \times 10^4$ and not $51200 \pm 4600$.
+
+\item When rounding numbers in a table, some variation of the rounding
+  rules above may be required to achieve uniformity.
+
+\item Hyphenation should be used where necessary to avoid ambiguity,
+  but not excessively. For example: ``big-toothed fish''
+  (to indicate that big refers to the teeth, not to the fish),
+  but ``big white fish''.
+  A compound modifier often requires hyphenation 
+  (\CP-violating observables, \bquark-hadron decays, final-state radiation, second-order polynomial),
+  even if the same combination in an adjective-noun combination does not
+  (direct \CP violation, heavy \bquark hadrons, charmless final state).
+  Adverb-adjective combinations are not hyphenated if the adverb ends with 'ly':
+  oppositely charged pions, kinematically similar decay.
+  Cross-section, cross-check, and two-dimensional are hyphenated.
+  Semileptonic, pseudorapidity, pseudoexperiment, multivariate, multidimensional, reweighted, preselection, 
+  nonresonant, nonzero, nonparametric, nonrelativistic, misreconstructed and misidentified
+  are single words and should not be hyphenated.
+
+\item Minus signs should be in a proper font ($-1$), not just hyphens
+  (-1); this applies to figure labels as well as the body of the text.
+  In Latex, use math mode (between \verb!$$!'s) or make a dash (``\verb!--!'').
+  In ROOT, use \verb!#font[122]{-}! to get a normal-sized minus sign. 
+
+\item Inverted commas (around a title, for example) should be a
+  matching set of left- and right-handed pairs: ``Title''. The use of
+  these should be avoided where possible.
+
+\item Single symbols are preferred for variables in equations, \eg\
+  \BF\ rather than BF for a branching fraction.
+
+\item Parentheses are not usually required around a value and its
+  uncertainty, before the unit, unless there is possible ambiguity: so
+  $\dms = 20 \pm 2\invps$ does not need parentheses, whereas $f_d =
+  (40 \pm 4)$\% or $x=(1.7\pm0.3)\times 10^{-6}$ does.
+  The unit does not need to be repeated in
+  expressions like $1.2 < E < 2.4\gev$.
+
+\item The same number of decimal places should be given for all values
+  in any one expression (\eg $5.20 < m_B < 5.34\gevcc$).
+
+\item Apostrophes are best avoided for abbreviations: if the abbreviated term
+  is capitalised or otherwise easily identified then the plural can simply add
+  an s, otherwise it is best to rephrase: \eg HPDs, \pizs, pions, rather
+  than HPD's, \piz's, $\pion$s.
+
+\item Particle labels, decay descriptors and mathematical functions are not nouns, and need often to be followed by a noun. 
+Thus ``background from $\Bd\to\pi^+\pi^-$ decays'' instead of ``background from $\Bd\to\pi^+\pi^-$'',
+and ``the width of the Gaussian function'' instead of ``the width of the Gaussian''.
+
+\item In equations with multidimensional integrations or differentiations, the differential terms should be separated by a thin space. 
+Thus $\int f(x,y) dx\,dy$ instead $\int f(x,y) dxdy$ and
+$\frac{d^2\Gamma}{dx\,dQ^2}$ instead of $\frac{d^2\Gamma}{dxdQ^2}$.
+The d's are allowed in either roman or italic font, but should be consistent throughout the paper.
+
+
+\end{enumerate}

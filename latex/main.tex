@@ -1,0 +1,126 @@
+%\pdfoutput=1
+% Uncomment line above if submitting to arXiv and using pdflatex
+
+% $Id: main.tex 93735 2016-06-17 09:31:58Z pkoppenb $
+% ============================================================================
+% Purpose: Template for LHCb documents
+% Authors: Tomasz Skwarnicki, Roger Forty, Ulrik Egede
+% Created on: 2010-09-24
+% ============================================================================
+\documentclass[12pt,a4paper]{article}
+%%\documentclass[12pt,letter]{article}
+% For two column text, add "twocolumn" as an option to the document
+% class. Also uncomment the two "onecolumn" and "twocolumn" lines
+% around the title page below.
+
+% Variables that controls behaviour
+\usepackage{ifthen} % for conditional statements
+\newboolean{pdflatex}
+\setboolean{pdflatex}{true} % False for eps figures 
+
+\newboolean{articletitles}
+\setboolean{articletitles}{true} % False removes titles in references
+
+\newboolean{uprightparticles}
+\setboolean{uprightparticles}{false} %True for upright particle symbols
+
+\newboolean{inbibliography}
+\setboolean{inbibliography}{false} %True once you enter the bibliography
+
+\input{preamble}
+\usepackage{longtable} % only for template; not usually to be used in PAPERs
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Title     %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{1}
+
+% %%%%%%% CHOOSE TITLE PAGE--------
+%\onecolumn
+\input{title-LHCb-PAPER}
+%\twocolumn
+% %%%%%%%%%%%%% ---------
+
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\setcounter{footnote}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Table of Content   %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Uncomment next 2 lines if desired
+%\tableofcontents
+%\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Main text %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{plain} % restore page numbers for the main text
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+%% Uncomment during review phase. 
+%% Comment before a final submission.
+\linenumbers
+
+% You can include short sections directly in the main tex file.
+% However, for larger papers it is desirable to split the text into
+% several semiautonomous files, which can be revised independently.
+% This is especially useful when developing a document in
+% collaboration with several people, since then different parts can be
+% edited independently.  This type of file organization is shown here.
+% 
+
+\input{sections/introduction}
+
+\input{sections/principles}
+
+\input{sections/layout}
+
+\input{sections/typography}
+
+\input{sections/detector}
+
+\input{sections/figures}
+
+\input{sections/reference}
+
+\input{sections/supplementary}
+
+\input{sections/appendix}
+
+
+\addcontentsline{toc}{section}{References}
+\setboolean{inbibliography}{true}
+\bibliographystyle{LHCb}
+\bibliography{bibliography/main,bibliography/LHCb-PAPER,bibliography/LHCb-CONF,bibliography/LHCb-DP,bibliography/LHCb-TDR}
+
+
+\newpage
+
+% Author List ----------------------------                                                                                                                                                                                                                                                                                                
+%  You need to get a new author list!                                                                                                                                                                                                                                                                                                    
+
+%\input{LHCb_HD_authorlist_2014-06-20}
+ 
+
+
+The author list for journal publications is generated from the Membership Database shortly after 'approval to go to paper' has been given.
+It will be sent to you by email shortly after a paper number has been assigned.
+The author list should be included already at first circulation,
+to allow new members of the collaboration to verify that they have been included correctly.
+Occasionally a misspelled name is corrected, or associated institutions become full members.
+Therefore an updated author list will be sent to you after the final EB review of the paper.
+In case line numbering doesn't work well after including the authorlist, try moving the \verb!\bigskip! after the last author to a separate line.
+
+
+The authorship for Conference Reports should be ``The LHCb collaboration'', with a footnote giving the name(s) of the contact
+  author(s), but without the full list of collaboration names.
+
+
+
+\end{document}

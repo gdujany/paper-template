@@ -1,0 +1,149 @@
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%showpacs,preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps, prl
+]{revtex4-1}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+% --- LHCb specfic ----
+\usepackage{ifthen} % for conditional statements
+\newboolean{pdflatex}
+\setboolean{pdflatex}{true} % False for eps figures 
+
+\newboolean{articletitles}
+\setboolean{articletitles}{true} % False removes titles in references
+
+\newboolean{uprightparticles}
+\setboolean{uprightparticles}{false} %True for upright particle symbols
+
+\newboolean{inbibliography}
+\setboolean{inbibliography}{false} %True once you enter the bibliography
+
+\newboolean{wordcount}
+\setboolean{wordcount}{false} % False for normal usage; true for wordcount.sh
+
+\ifthenelse{\boolean{wordcount}}%
+{\usepackage{bibentry} % For nobibliography command
+ \usepackage{mciteplus} % combine multiple citations
+ \usepackage{comment} % comment lines
+ % Uncomment the lines below to exclude equations from the word count
+ %\excludecomment{align*} % Remove align*
+ %\excludecomment{align} % Remove align
+ %\let\endalign\relax % Remove align
+ %\excludecomment{equation*} % Remove equation* (does not work)
+ %\excludecomment{equation} % Remove equation
+ %\let\endequation\relax % Remove equation
+ %\excludecomment{eqnarray*} % Remove eqnarray*
+ %\excludecomment{eqnarray} % Remove eqnarray
+ %\let\endeqnarray\relax % Remove eqnarray
+ \excludecomment{acknowledgments} % Remove acknowledgments
+ \let\endacknowledgments\relax % Remove acknowledgments
+ \def\maketitle{} % Remove title and abstract
+}{
+}
+
+\graphicspath{{./figs/}}
+\DeclareGraphicsExtensions{.pdf,.PDF,png,.PNG}
+\usepackage{xspace} 
+\makeatletter
+\gdef\@ptsize{0} % fix miniscule font definition from lhcb-symbols
+\makeatother
+\let\put\relax % avoid \put commands in a PRL paper 
+% Remove the Acknowledgement heading for PRL
+\makeatletter
+\usepackage{suffix}
+\let\latex@section\section
+\WithSuffix\def\section*{\secdef\my@section{\latex@section*}}
+\def\my@section[#1]#2{}
+\makeatother
+
+\input{lhcb-symbols-def}
+\usepackage{longtable} % only for template; not usually to be used in PAPERs
+% --------------------
+
+\begin{document}
+
+\preprint{LHCb-PAPER-20XX-YYY}
+
+\title{Template for writing LHCb papers}
+
+\author{LHCb collaboration}
+\affiliation{%
+Authors are listed at the end of this Letter.}%
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+  Guidelines for the preparation of LHCb documents are given. This is
+  a ``living'' document that should reflect our current practice. It
+  is expected that these guidelines are implemented for papers
+  before they go into the first collaboration wide review. Please
+  contact the Editorial Board chair if you have suggestions for
+  modifications.
+  This is the title page for journal publications (PAPER).
+  For a CONF note or ANA note, switch to the appropriate template 
+  by uncommenting the corresponding line in the file \verb!main.tex!.  
+\end{abstract}
+
+\pacs{}% PACS, the Physics and Astronomy Classification Scheme.
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+                              %display desired
+\maketitle
+
+\input{introduction}
+
+\input{principles}
+
+\input{layout}
+
+\input{typography}
+
+\input{detector}
+
+\input{figures}
+
+\input{reference}
+
+\input{supplementary}
+
+\begin{acknowledgments}
+\input{acknowledgements}
+\end{acknowledgments}
+
+% Produces the bibliography via BibTeX.
+\ifthenelse{\boolean{wordcount}}%
+{ \bibliographystyle{plain}
+  \nobibliography{main,LHCb-PAPER,LHCb-CONF,LHCb-DP,LHCb-TDR}}
+{\bibliography{main,LHCb-PAPER,LHCb-CONF,LHCb-DP,LHCb-TDR}}
+
+% Words in appendix do not count for PRL word limit
+\ifthenelse{\boolean{wordcount}}{}{%
+  \clearpage
+  %\input{appendix} # this does not compile with revtex
+  \appendix
+
+  % This should be taken out in the final paper
+  \input{supplementary-app}
+}
+
+\end{document} 
+
+%
+% ****** End of file apssamp.tex ******

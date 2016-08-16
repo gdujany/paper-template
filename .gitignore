@@ -1,0 +1,12 @@
+main.aux
+main.bbl
+main.blg
+main.fdb_latexmk
+main.fls
+main.log
+main.out
+main.toc
+
+*.pyc
+
+.DS_Store

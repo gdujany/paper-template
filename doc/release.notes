@@ -1,0 +1,24 @@
+!-----------------------------------------------------------------------------
+! Package     : LHCb-latex-template
+! Responsible : Tomasz Skwarnicki, Ulrik Egede
+! Purpose     : recommended LHCb note or paper template
+!-----------------------------------------------------------------------------
+! 2011-06-08 - Tomasz Skwarnicki
+ - move latest/figs to latest/latex/figs to make arXiv submissions easier
+   switch to pdflatex as default in Makefile
+
+! 2010-12-21 - Chris Parkes
+ - Rewrite of standard lhcb latex symbols file
+   Added python script listsymbols to make .tex from the symbols
+
+! 2010-10-05 - Tomasz Skwarnicki
+ - After Rogers edits and title page for LHCb-ANA notes.
+   Introduce a switch between latex and pdf figures.
+
+! 2010-09-25 - Tomasz Skwarnicki
+ - Merge templates from Roger and Ulrik Egede
+
+! 2010-09-24 - Tomasz Skwarnicki
+ - Initial prototype 
+
+

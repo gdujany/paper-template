@@ -1,0 +1,100 @@
+\section{References}
+\label{sec:References}
+
+References should be made using Bib\TeX~\cite{BibTeX}. A special style
+\texttt{LHCb.bst} has been created to achieve a uniform
+style. Independent of the journal the paper is submitted to, the
+preprint should be created using this style. Where arXiv numbers
+exist, these should be added even for published articles. In the PDF
+file, hyperlinks will be created to both the arXiv and the published
+version.
+
+\begin{enumerate}
+
+\item Citations are marked using square brackets, and the
+  corresponding references should be typeset using Bib\TeX\ and the
+  official \lhcb Bib\TeX\ style. An example is in
+  Ref.~\cite{Sjostrand:2006za}.
+
+\item For references with four or less authors all of the authors'
+  names are listed~\cite{Majorana:1937vz}, otherwise the first author
+  is given, followed by \etal. The \lhcb Bib\TeX\ style will
+  take care of this.
+
+\item The order of references should be sequential when reading the
+  document. This is automatic when using Bib\TeX.
+
+\item The titles of papers should in general be included. To remove
+  them, change \texttt{\textbackslash
+    setboolean\{articletitles\}\{false\}} to \texttt{true} at the top
+  of this template.
+  Note that the titles in \verb!LHCb-PAPER.bib! are in plain LaTex,
+  in order to correspond to the actual title on the arXiv record.
+  Some differences in style can thus be noticed with respect to the
+  main text, for example particle names that use capital Greek letters
+  are not slanted in the reference titles ($\Lambda$ vs \Lz)  
+
+\item Whenever possible, use references from the supplied files
+\verb!main.bib!, \verb!LHCb-PAPER.bib!, \verb!LHCb-CONF.bib!, and \verb!LHCB-DP.bib!.
+These are kept up-to-date by the EB. If you see a mistake, do not edit these files,
+but let the EB know. This way, for every update of the paper, you save
+yourself the work of updating the references. Instead, you can just copy or
+check in the latest versions of the \verb!.bib! files from the repository.   
+
+\item For those references not provided by the EB, the best
+  is to copy the Bib\TeX\ entry directly from
+  \texttt{Inspire}. Often these need to be edited to get the 
+  correct title, author names and formatting.
+  For authors with multiple initials, add a space between them (change \texttt{R.G.C.} to \texttt{R. G. C.}),
+  otherwise only the first initial will be taken. 
+  Also, make sure to eliminate unnecessary capitalisation.
+  Apart from that, the title should be respected as much as possible
+  (\eg do not change particle names to PDG convention nor introduce/remove factors of $c$).
+  Check that both the arXiv and the journal index are clickable
+  and point to the right article.
+
+%\item Even if the basic formatting of the Bib\TeX\ entry is taken from
+%  \texttt{Inspire}, all the data should be cross checked against the
+%  journal. Often there are minor changes to author initials or
+%  titles. In case of a difference between the preprint and the
+%  journal, the bibliographic information from the journal should be
+%  used.
+
+\item The \texttt{mciteplus}~\cite{mciteplus} package is used
+  to enable multiple references to show up as a single item in the
+  reference list. As an example \texttt{\textbackslash
+    cite\{Mohapatra:1979ia,*Pascoli:2007qh\}} where the \texttt{*}
+  indicates that the reference should be merged with the previous
+  one. The result of this can be seen in
+  Ref.~\cite{Mohapatra:1979ia,*Pascoli:2007qh}. Be aware that the
+  \texttt{mciteplus} package should be included as the very last item
+  before the \texttt{\textbackslash begin\{document\}} to work
+  correctly.
+
+\item It should be avoided to make references to public notes and
+  conference reports in public documents. Exceptions can be discussed
+  on a case-by-case basis with the review committee for the
+  analysis. In internal reports they are of course welcome and can be
+  referenced as seen in Ref.~\cite{LHCb-CONF-2011-003} using the
+  \texttt{lhcbreport} category. For conference reports, omit the
+  author field completely in the Bib\TeX\ record.
+
+\item To get the typesetting and hyperlinks correct for \lhcb reports,
+  the category \texttt{lhcbreport} should be used in the Bib\TeX\
+  file. See Refs.~\cite{LHCb-INT-2011-047, *LHCb-ANA-2011-078,
+    *CERN-THESIS-2014-057, *LHCb-PROC-2014-017, *LHCB-TALK-2014-257}
+  for some examples. It can be used for \lhcb documents in the series
+  \texttt{CONF}, \texttt{PAPER}, \texttt{PROC}, \texttt{THESIS},
+  \texttt{LHCC}, \texttt{TDR} and internal \lhcb reports. Papers sent
+  for publication, but not published yet, should be referred with
+  their \texttt{arXiv} number, so the \texttt{PAPER} category should
+  only be used in the rare case of a forward reference to a paper.
+
+\item Proceedings can be used for references to items such as the
+  \lhcb simulation~\cite{LHCb-PROC-2011-006}, where we do not yet have
+  a published paper.
+
+\end{enumerate}
+
+There is a set of standard references to be used in \lhcb that are
+listed in Appendix~\ref{sec:StandardReferences}.

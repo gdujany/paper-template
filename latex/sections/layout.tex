@@ -1,0 +1,107 @@
+\section{Layout}
+
+\begin{enumerate}
+
+\item Unnecessary blank space should be avoided, between paragraphs or
+  around figures and tables.
+
+\item Figure and table captions should be concise and use a somewhat smaller typeface
+  than the main text, to help distinguish them. This is achieved by 
+  inserting \verb!\small! at the beginning of the caption.
+  (NB with the latest version of the file \verb!premable.tex! this is automatic)
+  Figure captions go below the figure, table captions go above the
+  table.
+
+\item Captions and footnotes should be punctuated correctly, like
+  normal text. The use of too many footnotes should be avoided:
+  typically they are used for giving commercial details of companies,
+  or standard items like coordinate system definition or the implicit
+  inclusion of charge-conjugate processes.\footnote{If placed at the end
+    of a sentence, the footnote symbol normally follows the
+    punctuation; if placed in the middle of an equation, take care to
+    avoid any possible confusion with an index.}$^,$\footnote{The standard footnote reads: ``The inclusion of charge-conjugate processes is implied
+    throughout.'' This may need to be modified, for example with ``except in the discussion of asymmetries.''}
+
+\item Tables should be formatted in a simple fashion, without
+  excessive use of horizontal and vertical lines. See
+  Table~\ref{tab:example} for an example.
+
+\item Figures and tables should normally be placed so that they appear
+  on the same page as their first reference, but at the top or bottom
+  of the page; if this is not possible, they should come as soon as
+  possible afterwards.  They must all be referred to from the text.
+
+\item If one or more equations are referenced, all equations should be numbered using parentheses as shown in
+  Eq.~\ref{eq:CKM},
+  \begin{equation}
+    \label{eq:CKM}
+    V_{\uquark\squark}V_{\uquark\bquark}^* + 
+    V_{\cquark\squark}V_{\cquark\bquark}^* + 
+    V_{\tquark\squark}V_{\tquark\bquark}^* = 0 \ . 
+  \end{equation}
+  
+\item Displayed results like
+  \begin{equation*}
+    \BF(\decay{\Bs}{\mumu}) < 1.5 \times 10^{-8} \text{ at 95\% CL}
+  \end{equation*}
+  should in general not be numbered.
+
+\item Numbered equations should be avoided in captions and footnotes.
+
+\item Displayed equations are part of the normal grammar of the
+  text. This means that the equation should end in full stop or comma if
+  required when reading aloud. The line after the equation should only
+  be indented if it starts a new paragraph.
+
+\item Sub-sectioning should not be excessive: sections with more than three
+levels of index (1.1.1) should be avoided.
+
+%\item It is generally preferable to itemize a list using numbers rather
+%than bullets.
+
+\item Acronyms should be defined the first time they are used,
+  \eg ``Monte Carlo~(MC) events containing a doubly
+  Cabibbo-suppressed~(DCS) decay have been generated.''
+  The abbreviated words should not be capitalised if it is not naturally
+  written with capitals, \eg quantum chromodynamics (QCD),
+  impact parameter (IP), boosted decision tree (BDT).
+  Avoid acronyms if they are used three times or less.
+  A sentence should never start with an acronym and its better to
+  avoid it as the last word of a sentence as well.
+
+\end{enumerate}
+
+\begin{table}[t]
+  \caption{
+    %\small %captions should be a little bit smaller than main text
+    Background-to-signal ratio estimated in a $\pm 50\mevcc$ 
+    mass window for the prompt and long-lived backgrounds, and the 
+    minimum bias rate.}
+\begin{center}\begin{tabular}{lccc}
+    \hline
+    Channel                           & $B_{\mathrm{pr}}/S$ & $B_{\mathrm{LL}}/S$   & MB rate       \\ 
+    \hline
+    \BsToJPsiPhi              & $ 1.6 \pm 0.6$ & $ 0.51 \pm 0.08$ & $\sim 0.3$ Hz \\
+    \BdToJPsiKst              & $ 5.2 \pm 0.3$ & $1.53 \pm 0.08 $ & $\sim 8.1$ Hz \\
+    \decay{\Bp}{\jpsi\Kstarp} & $ 1.6 \pm 0.2$ & $0.29 \pm 0.06$  & $\sim 1.4$ Hz \\
+    \hline
+  \end{tabular}\end{center}
+\label{tab:example}
+\end{table}
+
+% old table with vertical lines
+%\begin{table}[t]
+%  \caption{
+%    \small %captions should be a little bit smaller than main text
+%    Background-to-signal ratio estimated in a $\pm 50\mevcc$ 
+%    mass window for the prompt and long-lived backgrounds, and the 
+%    minimum bias rate.}
+%\begin{center}\begin{tabular}{l|c|c|c}
+%    Channel                           & $B_{\mathrm{pr}}}/S$ & $B_{{\mathrm{LL}}/S$   & MB rate       \\ 
+%    \hline
+%    \BsToJPsiPhi              & $ 1.6 \pm 0.6$ & $ 0.51 \pm 0.08$ & $\sim 0.3$ Hz \\
+%    \BdToJPsiKst              & $ 5.2 \pm 0.3$ & $1.53 \pm 0.08 $ & $\sim 8.1$ Hz \\
+%    \decay{\Bp}{\jpsi\Kstarp} & $ 1.6 \pm 0.2$ & $0.29 \pm 0.06$  & $\sim 1.4$ Hz \\
+%  \end{tabular}\end{center}
+%\label{tab:example}
+%\end{table}
